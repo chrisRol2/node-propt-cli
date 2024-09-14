@@ -1,6 +1,6 @@
 {
   "name": "nodejs-prompt-cli",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A simple package that prints a question to the console and waits for the user's response.",
   "main": "./build/main.js",
   "types": "./build/main.d.ts",
