@@ -1,0 +1,7 @@
+.env
+.github/
+nodemon.json
+Makefile
+.env.export
+.env.template
+node_modules
