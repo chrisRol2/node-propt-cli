@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chrisRol2/node-propt-cli.git"
+    "url": "git+https://github.com/chrisRol2/node-propt-cli.git"
   },
   "keywords": [
     "typescript",
