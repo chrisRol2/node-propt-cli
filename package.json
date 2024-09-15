@@ -1,6 +1,6 @@
 {
   "name": "nodejs-prompt-cli",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "A simple package that prints a question to the console and waits for the user's response.",
   "main": "./build/main.js",
   "types": "./build/main.d.ts",
@@ -13,7 +13,7 @@
     "build:watch": "tsc --build tsconfig.json --watch",
     "clean": "make clean",
     "build": "tsc --build tsconfig.json",
-    "build:bundle": "tsc --build tsconfig.json && esbuild ./build/main.js --bundle --outfile=./build/bundle/main.js --minify --allow-overwrite --platform=node --target=node16"
+    "build:bundle": "tsc --build tsconfig.json && esbuild ./build/main.js --bundle --outfile=./build/bundle/main.js --minify --allow-overwrite --platform=node --target=node22"
   },
   "repository": {
     "type": "git",
@@ -43,7 +43,6 @@
   },
   "homepage": "https://github.com/chrisRol2/node-propt-cli",
   "dependencies": {
-    "dotenv": "^16.0.1",
     "readline": "1.3.0"
   },
   "devDependencies": {
