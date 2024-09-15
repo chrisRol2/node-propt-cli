@@ -28,7 +28,7 @@ jobs:
           git config user.email "actions@github.com"
           # Bump version based on commit message (patch/minor/major)
           npm version patch -m "ci: bump version to %s"
-          git push origin master --follow-tags
+          git push origin main --follow-tags
 
       - name: Create GitHub release
         id: create_release
