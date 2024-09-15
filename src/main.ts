@@ -17,6 +17,18 @@ class MutableStdout extends Writable {
   }
 }
 
+/**
+ * Ask a question to the user and return the answer
+ * @param question The question to ask
+ * @returns The answer to the question
+ * @example
+ * const answer = await askQuestion("What is your name?");
+ * console.log(`Hello, ${answer}!`);
+ * // Output: What is your name?
+ * // (user types "John")
+ * // Hello, John!AWS
+ */
+
 const askQuestion = (question: string): Promise<string> => {
   const mutableStdout = new MutableStdout(question);
   const rl = readline.createInterface({
