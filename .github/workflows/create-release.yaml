@@ -8,7 +8,7 @@ on:
 
 jobs:
   create_release:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '22'
 
       - name: Install dependencies
         run: npm install
@@ -40,15 +40,17 @@ jobs:
           release_name: "Release ${{ env.tag_name }}"
           draft: false
           prerelease: false
-          generate_release_notes: true
 
   publish_to_npm:
-    needs: create_release  # Este job depende de que el release haya sido creado
+    needs: create_release
     runs-on: ubuntu-22.04
+    if: success()
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Asegurarse de obtener todo el historial y tags
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
